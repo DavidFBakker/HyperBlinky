@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,26 +44,25 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.WinControls, Version=2015.3.1104.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin40\Telerik.WinControls.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.UI, Version=2015.3.1104.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin40\Telerik.WinControls.UI.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="TelerikCommon, Version=2015.3.1104.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms Q3 2015\Bin40\TelerikCommon.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\FolderBrowserDialogEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\LEDBlinkyControls.cs" />
+    <Compile Include="Classes\LEDBlinkyInputMap.cs" />
+    <Compile Include="Classes\mame.cs" />
+    <Compile Include="Classes\MameControls.cs" />
+    <Compile Include="ConfigItem.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="RadForm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RadForm1.Designer.cs">
       <DependentUpon>RadForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
     <EmbeddedResource Include="RadForm1.resx">
       <DependentUpon>RadForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <!--sirinie -->
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InputLabelAliases.txt" />
+    <Content Include="KeyMapping.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
